@@ -1,0 +1,113 @@
+body {
+  background: url(/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;;
+  background-position: center;
+}
+h5 {
+    margin-bottom: 0;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#saved-list li {
+  width: 100%
+}
+
+.fa fa-times {
+    opacity: 0.10;                /* Opacity (Transparency) */
+    color: rgba(0, 0, 0, 0.75);   /* RGBA Color (Alternative Transparency) */
+    -webkit-filter: blur(2px);    /* Blur */
+    -moz-filter: blur(2px);
+    filter: blur(2px);
+}
+#hr{
+    padding: 2px;
+    margin: 0px;
+  }
+
+
+#padding{
+  padding: 4em 1em;
+}
+
+.pref-padding{
+  padding: 4em 1em;
+
+}
+
+#results-padding{
+padding: 4em 4em;
+
+}
+
+
+#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+ }
+#nav li {
+	float: left; }
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
+#nav li a:hover {
+	color: grey;
+	background-color: #fff; }
+
+#logo {
+    text-decoration:none;
+    color: white;
+  }
+  #logo:hover {
+  	color: grey;
+  	background-color: #fff; }
+
+    /* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+                url('http://i.stack.imgur.com/FhHRx.gif')
+                50% 50%
+                no-repeat;
+}
+
+div#saved-list{
+  padding: 10em;
+}
+
+div#saved-list li{
+    display: inline-block;
+    text-align:center
+    max-width: 20px;
+
+}
+
+span.fa.fa-x.fa-1x.fa-times:hover{
+color: red
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body .loading .modal {
+    display: block;
+}
