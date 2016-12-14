@@ -3,10 +3,10 @@ import { browserHistory } from 'react-router'
 
 const signUp = function(email, password){
   //dispatch({type: CREATING_USER})
-  debugger
+  
   return function(dispatch){
     $.ajax({
-      url: 'http://rntr-api.herokuapp.com/users',
+      url: 'https://rntr-api.herokuapp.com/users',
       type: 'POST',
       data: JSON.stringify({user: {email: email, password: password}}),
       contentType:"application/json; charset=utf-8",
