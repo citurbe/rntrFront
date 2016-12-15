@@ -5,7 +5,7 @@ const signUp = function(email, password){
   //dispatch({type: CREATING_USER})
   return function(dispatch){
     $.ajax({
-      url: 'http://localhost:3000/users',
+      url: 'https://rntr-api.herokuapp.com/users',
       type: 'POST',
       data: JSON.stringify({user: {email: email, password: password}}),
       contentType:"application/json; charset=utf-8",
@@ -32,7 +32,7 @@ const aptSearch = function(address, userID){
 
   return function(dispatch){
     $.ajax({
-      url: `http://localhost:3000/apts`,
+      url: `https://rntr-api.herokuapp.com/apts`,
       type: 'POST',
       data: JSON.stringify({address: address, user_id: userID}),
       contentType: "application/json; charset=utf-8",
@@ -50,7 +50,7 @@ const aptSearch = function(address, userID){
 const logIn = function(email, password){
   return function(dispatch){
     $.ajax({
-      url: 'http://localhost:3000/sessions',
+      url: 'https://rntr-api.herokuapp.com/sessions',
       type: 'POST',
       data: JSON.stringify({user: {email: email, password: password}}),
       contentType:"application/json; charset=utf-8",
@@ -77,7 +77,7 @@ const logOut = function (event){
 const savePreferences = function(userState, prefState){
   return function(dispatch){
     $.ajax({
-      url: `http://localhost:3000/users/${userState.userID}`,
+      url: `https://rntr-api.herokuapp.com/users/${userState.userID}`,
       type: 'PATCH',
       data: JSON.stringify({prefState: prefState, token: localStorage.token}),
       contentType:"application/json; charset=utf-8",
@@ -92,7 +92,7 @@ const savePreferences = function(userState, prefState){
 const showApartment = function(id){
   return function(dispatch){
     $.ajax({
-      url:`http://localhost:3000/apts/${id}`,
+      url:`https://rntr-api.herokuapp.com/apts/${id}`,
       type: 'GET',
       contentType:"application/json; charset=utf-8",
       dataType:"json"
@@ -107,7 +107,7 @@ const deleteSearch = function(id){
 
   return function(dispatch){
     $.ajax({
-      url: `http://localhost:3000/apts/${id}`,
+      url: `https://rntr-api.herokuapp.com/apts/${id}`,
       type: 'DELETE',
       contentType:"application/json; charset=utf-8",
       dataType:"json"
