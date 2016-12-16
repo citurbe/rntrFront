@@ -45,7 +45,7 @@ class PreferencesComponent extends React.Component{
       <div id='padding'>
         <form onSubmit={this.handleSubmit.bind(this)}>
 
-          <label id="destination">Destination:</label>
+          <label id="destination">Commuting Address:</label>
           <Autocomplete
             defaultValue={this.state.destination}
             id="destination"
@@ -59,7 +59,7 @@ class PreferencesComponent extends React.Component{
             componentRestrictions={{country: "us"}}
           />
 
-
+          <h6>Rate the importance of each category from 1 (least important) to 10 (most important)</h6>
           <p><label id="commute">Commute: </label>
 
           <select id="commute" defaultValue={this.state.commute} onChange={this.handleChange.bind(this)}>

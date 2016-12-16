@@ -46,7 +46,7 @@ class ResultsComponent extends Component {
         label: function(value) {
           return Math.round(value) + " / " + this.max;
         }})
-      safety_gauge.setValueAnimated(this.props.user.safety, 1);
+      safety_gauge.setValueAnimated(this.props.apartment.crime_score, 1);
 
 
       let commute_gauge = Gauge(
@@ -58,7 +58,7 @@ class ResultsComponent extends Component {
         label: function(value) {
           return Math.round(value) + " / " + this.max;
         }})
-      commute_gauge.setValueAnimated(this.props.user.commute, 1);
+      commute_gauge.setValueAnimated(this.props.apartment.commute_score, 1);
 
 
       let schools_gauge = Gauge(
@@ -70,7 +70,7 @@ class ResultsComponent extends Component {
         label: function(value) {
           return Math.round(value) + " / " + this.max;
         }})
-      schools_gauge.setValueAnimated(this.props.user.schools, 1);
+      schools_gauge.setValueAnimated(this.props.apartment.school_score, 1);
 
       let amenities_gauge = Gauge(
       document.getElementById("amenities_gauge"), {
@@ -81,7 +81,7 @@ class ResultsComponent extends Component {
         label: function(value) {
           return Math.round(value) + " / " + this.max;
         }})
-      amenities_gauge.setValueAnimated(this.props.user.amenities, 1);
+      amenities_gauge.setValueAnimated(this.props.apartment.amenities_score, 1);
   }
 
   componentDidUpdate(){
@@ -109,7 +109,7 @@ class ResultsComponent extends Component {
        label: function(value) {
          return Math.round(value) + " / " + this.max;
        }})
-     safety_gauge.setValueAnimated(this.props.user.safety, 1);
+     safety_gauge.setValueAnimated(this.props.apartment.crime_score, 1);
 
      document.getElementById("commute_gauge").innerHTML = "<p>Commute</p>"
      let commute_gauge = Gauge(
@@ -121,7 +121,7 @@ class ResultsComponent extends Component {
        label: function(value) {
          return Math.round(value) + " / " + this.max;
        }})
-     commute_gauge.setValueAnimated(this.props.user.commute, 1);
+     commute_gauge.setValueAnimated(this.props.apartment.commute_score, 1);
 
      document.getElementById("schools_gauge").innerHTML = "<p>Schools</p>"
      let schools_gauge = Gauge(
@@ -133,7 +133,7 @@ class ResultsComponent extends Component {
        label: function(value) {
          return Math.round(value) + " / " + this.max;
        }})
-     schools_gauge.setValueAnimated(this.props.user.schools, 1);
+     schools_gauge.setValueAnimated(this.props.apartment.school_score, 1);
 
      document.getElementById("amenities_gauge").innerHTML = "<p>Amenities</p>"
      let amenities_gauge = Gauge(
@@ -145,7 +145,7 @@ class ResultsComponent extends Component {
        label: function(value) {
          return Math.round(value) + " / " + this.max;
        }})
-     amenities_gauge.setValueAnimated(this.props.user.amenities, 1);
+     amenities_gauge.setValueAnimated(this.props.apartment.amenities_score, 1);
   }
 
   render() {
@@ -164,7 +164,7 @@ class ResultsComponent extends Component {
           Within the past year, there were {this.props.apartment.data.crime_data.felonies} felonies, {this.props.apartment.data.crime_data.misdemeanors} misdemeanors, and {this.props.apartment.data.crime_data.violations} violations reported near the apartment.
           <p>The commute time from this apartment to your workplace is {this.props.apartment.data.distance_data} mins.</p>
         </p>
-        <div className='row'><h4>Your Preferences:</h4></div>
+        <div className='row'><h4>Category Scores:</h4></div>
         <div className='row'>
           <center>
             <div className = 'two columns' id="commute_gauge">
