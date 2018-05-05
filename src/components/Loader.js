@@ -5,7 +5,7 @@ const Loader = (props) => {
 
   return (
     <div>
-    <img src='http://www.manbhumsambad.com/images/loader.gif' />
+    <img src='http://gifimage.net/wp-content/uploads/2017/09/ajax-loading-gif-transparent-background-8.gif' />
     </div>
   )
 
