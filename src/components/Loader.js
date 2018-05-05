@@ -5,7 +5,7 @@ const Loader = (props) => {
 
   return (
     <div>
-    <img src='http://www.aquiedestaque.com.br/imagem/loading.gif' />
+    <img src='http://www.manbhumsambad.com/images/loader.gif' />
     </div>
   )
 
