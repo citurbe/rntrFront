@@ -1,0 +1,30 @@
+.donutchart-track{
+  fill: transparent;
+  stroke: #C9D1CF;
+  stroke-width: 26;
+}
+.donutchart-indicator {
+  fill: transparent;
+  stroke: blue;
+  stroke-width: 26;
+  stroke-dasharray: 0 10000;
+  transition: stroke-dasharray .3s ease;
+}
+
+.donutchart {
+  margin: 0 ;
+  border-radius: 50%;
+  display: block;
+}
+
+
+.donutchart-text{
+  font-family: 'Roboto';
+  fill: blue;
+}
+.donutchart-text-val{
+  font-size:20px;
+}
+.donutchart-text-percent{
+  font-size:20px;
+}
